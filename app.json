@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "CakeFinderApp",
-    "slug": "CakeFinderApp",
+    "name": "Gâteau Finder",
+    "slug": "gateaufinder",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,6 +25,15 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "scheme": "myapp", // Add this line,
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Autoriser Gâteau Finder à utiliser votre position."
+        }
+      ]
+    ]
   }
 }
