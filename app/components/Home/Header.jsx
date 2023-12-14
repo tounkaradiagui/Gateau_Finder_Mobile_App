@@ -18,10 +18,14 @@ export default function Header() {
   return (
     <View style={styles.container}>
       {/* <Image source={{uri:user?.imageUrl}} style={{height:30, width:30, borderRadius:30}}/> */}
-      <Image
-        source={{ uri: user?.imageUrl}}
-        style={{ height: 30, width: 30, borderRadius: 30 }}
-      />
+      <TouchableOpacity>
+        <Image
+          source={require('../../../assets/images/ProfessionalPict.jpg')}
+          style={{ height: 30, width: 30, borderRadius: 30 }}
+        />
+      </TouchableOpacity>
+      {/* <Text style={styles.title}>{user ? `${user.firstName} ${user.lastName}` : ""}</Text> */}
+      
       <Text style={styles.brand}>Gâteau Finder</Text>
 
       <TouchableOpacity>
@@ -42,16 +46,14 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     marginTop: 10,
     alignItems: "center",
+    marginHorizontal:25
   },
   filter: {
-    marginRight: 40,
-    // width: 30,
-    // height:30,
-    // borderRadius:99
+    width: 30,
+    height:30,
   },
   brand: {
     borderWidth: 1,
-    marginRight: -50,
     borderColor: Colors.primary,
     padding: 5,
     textAlign: "center",

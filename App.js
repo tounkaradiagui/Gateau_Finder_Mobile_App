@@ -27,7 +27,7 @@ export default function App() {
 
       let location = await Location.getCurrentPositionAsync({});
       setLocation(location.coords);
-      console.log(location.coords);
+      // console.log(location.coords);
     })();
   }, []);
 

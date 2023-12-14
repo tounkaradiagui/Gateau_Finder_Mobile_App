@@ -13,6 +13,10 @@ export default function GoogleMapView() {
           provider={PROVIDER_GOOGLE}
           // customMapStyle={MapViewStyle}
           showsUserLocation={true}
+          followsUserLocation={true}
+          showMyLocationButton={false}
+          toolbarEnabled={false}
+          
           style={styles.map}
           region={{
             latitude: location?.latitude,
@@ -24,6 +28,7 @@ export default function GoogleMapView() {
             setLocation({ ...location, ...region });
           }}
         >
+          
           <Marker
             coordinate={{
               latitude: location?.latitude,
